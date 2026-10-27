@@ -91,6 +91,27 @@
 .log-dialog{padding:20px}.set-grid{display:grid;grid-template-columns:36px 1fr 1fr;gap:8px;align-items:center;margin:8px 0}.set-grid .head{font-size:10px;color:#7f8994;text-align:center}.set-num{width:34px;height:34px;display:grid;place-items:center;background:#0c1014;border:1px solid var(--line);border-radius:10px;color:var(--accent);font-weight:800}.set-grid input{padding:11px 9px;text-align:center}.history-mini{font-size:12px;color:var(--muted);margin:4px 0 8px}.day-summary{display:flex;justify-content:space-between;gap:10px;align-items:flex-end;margin-top:14px}.day-summary h2{margin:2px 0 0}.cycle-tag{font-size:11px;color:var(--muted)}
 @media(max-width:390px){.exercise-actions{grid-template-columns:1fr 1fr}.movement-demo{gap:7px}.demo-frame{min-height:138px}.tech-scroll{padding:17px}}
 
+
+/* MY FORM v0.3 — mockup-inspired training UI */
+.brand-card{display:flex;align-items:center;gap:14px;padding:15px 16px;margin-bottom:14px;background:linear-gradient(135deg,#10151a,#0b0e12);border:1px solid #232a32;border-radius:22px;box-shadow:0 18px 40px rgba(0,0,0,.24)}
+.brand-logo{width:60px;height:60px;border-radius:18px;object-fit:cover;box-shadow:0 0 0 1px rgba(101,245,140,.25),0 0 26px rgba(101,245,140,.12)}
+.brand-copy{min-width:0;flex:1}.brand-name{font-size:28px;line-height:1;font-weight:950;letter-spacing:-.04em}.brand-name span{color:var(--accent)}.brand-tag{margin-top:6px;color:#a8b0b8;font-size:12px}
+.home-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 14px}.home-stat{padding:12px 7px;text-align:center;background:#0d1116;border:1px solid #232a32;border-radius:16px}.home-stat i{display:block;font-style:normal;font-size:18px;margin-bottom:5px}.home-stat strong{display:block;font-size:19px}.home-stat small{display:block;color:#8f98a3;font-size:9.5px;margin-top:2px}
+.home-section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin:18px 2px 9px}.home-section-title h2{margin:0;font-size:21px}.home-section-title small{color:var(--muted)}
+.day-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.day-card{position:relative;overflow:hidden;min-height:172px;padding:14px 11px;border-radius:19px;border:1px solid #2b333c;background:#0e1318;color:var(--text);text-align:left}.day-card:before{content:"";position:absolute;inset:auto -25% -35% auto;width:100px;height:100px;border-radius:50%;filter:blur(25px);opacity:.28;background:var(--daycolor,var(--accent))}.day-card.a{--daycolor:#65f58c;border-color:rgba(101,245,140,.52)}.day-card.b{--daycolor:#43c8ff;border-color:rgba(67,200,255,.48)}.day-card.c{--daycolor:#ff9c37;border-color:rgba(255,156,55,.48)}.day-card b{font-size:18px;display:block}.day-card p{min-height:50px;color:#c3cbd2;font-size:11px;line-height:1.4}.day-card small{color:#8f98a3}.day-start{margin-top:10px;width:100%;border:0;border-radius:11px;padding:10px 6px;font-weight:850;background:var(--daycolor,var(--accent));color:#061108}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.quick-action{border:1px solid #252d35;background:#10151b;color:#dce2e7;border-radius:16px;padding:12px 4px 10px;display:grid;gap:5px;justify-items:center}.quick-action span{font-size:19px}.quick-action small{font-size:9.5px;color:#aab2ba}
+.recent-list{display:grid;gap:8px}.recent-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 12px;background:#0c1014;border:1px solid #232a32;border-radius:14px}.recent-item .left{display:flex;gap:10px;align-items:center}.recent-badge{width:34px;height:34px;border-radius:11px;background:rgba(101,245,140,.1);color:var(--accent);display:grid;place-items:center;font-weight:900}.recent-item strong{font-size:13px}.recent-item small{display:block;color:var(--muted);font-size:10px;margin-top:2px}
+.workout-hero{padding:18px;margin-top:0}.workout-title-row{display:flex;align-items:center;gap:12px}.workout-round-icon{width:48px;height:48px;border-radius:16px;background:rgba(101,245,140,.1);color:var(--accent);display:grid;place-items:center;font-size:23px;border:1px solid rgba(101,245,140,.18)}.workout-title-row h2{margin:0 0 3px}.workout-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0 4px}.meta-box{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 11px;border-radius:12px;background:#0b0f13;border:1px solid #222a32;font-size:11px}.meta-box span:first-child{color:#87919b}.meta-box strong{font-size:11px}
+.exercise-card.v3{padding:10px}.exercise-v3-row{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center}.exercise-thumb{width:62px;height:62px;border-radius:14px;background:radial-gradient(circle at 50% 45%,rgba(101,245,140,.12),transparent 60%),#090d11;border:1px solid #283039;overflow:hidden}.exercise-thumb svg{width:100%;height:100%;display:block}.exercise-v3-copy{min-width:0}.exercise-v3-copy h3{font-size:13px;margin:0 0 4px;line-height:1.25}.exercise-v3-copy p{font-size:10px;color:#929ca6;margin:0;line-height:1.35}.exercise-v3-copy .last-line{margin-top:4px;color:#cdd4da;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.tech-mini-btn{border:1px solid #34404a;background:#202a33;color:#edf2f5;border-radius:11px;padding:9px 9px;font-size:10px;font-weight:800}.exercise-row-num{position:absolute;left:-6px;top:-6px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#263039;color:white;border:2px solid #0c1014;font-size:10px;font-weight:900}.exercise-card.v3{position:relative}
+.exercise-bottom-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}.exercise-bottom-actions button{padding:9px 8px}
+.detail-dialog{padding:0!important;max-height:92vh;overflow:hidden}.detail-scroll{max-height:92vh;overflow:auto;padding:18px}.detail-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.detail-head h2{margin:2px 0 0;font-size:21px}.detail-muscles{color:#9ea8b1;font-size:11px;margin-top:3px}.detail-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;margin:14px 0;background:#0a0e12;border:1px solid #26303a;border-radius:13px}.detail-tab{border:0;background:transparent;color:#97a1aa;border-radius:10px;padding:10px 5px;font-weight:800;font-size:11px}.detail-tab.active{background:var(--accent);color:#061108}.detail-panel{display:none}.detail-panel.active{display:block}.detail-hero-demo{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:10px 0 15px}.detail-hero-demo .demo-frame{min-height:128px;padding:6px}.detail-hero-demo .demo-frame svg{height:112px}.detail-hero-demo .demo-frame:nth-child(2){border-color:rgba(67,200,255,.3)}.stage-badge{position:absolute;left:8px;bottom:8px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#051007;font-weight:900;font-size:10px}
+.muscle-pills{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}.muscle-pill{padding:12px 7px;border-radius:14px;background:#0b0f13;border:1px solid #242c34;text-align:center}.muscle-pill .muscle-icon{width:42px;height:58px;margin:0 auto 7px;position:relative}.muscle-pill .muscle-icon:before{content:"";position:absolute;left:13px;top:2px;width:16px;height:16px;border:2px solid #9aa4ad;border-radius:50%}.muscle-pill .muscle-icon:after{content:"";position:absolute;left:16px;top:19px;width:10px;height:31px;background:linear-gradient(#5c6872,#2c343b);border-radius:8px 8px 4px 4px;box-shadow:-9px 9px 0 -5px #ff655f,9px 9px 0 -5px #ff655f}.muscle-pill small{font-size:9px;color:#cbd2d7}
+.step-list{display:grid;gap:8px}.step-row{display:grid;grid-template-columns:26px 1fr;gap:9px;align-items:start}.step-num{width:25px;height:25px;border-radius:50%;background:var(--accent);color:#051007;display:grid;place-items:center;font-weight:900;font-size:11px}.step-row p{margin:2px 0;color:#cbd2d8;font-size:12px;line-height:1.45}
+.mistake-box{margin-top:15px;padding-top:13px;border-top:1px solid #26303a}.mistake-box h4{margin:0 0 8px}.mistake-item{display:flex;gap:8px;color:#c7ced4;font-size:12px;line-height:1.4;margin:6px 0}.mistake-item b{color:#ff6b6b}
+.record-summary{padding:12px;border-radius:14px;background:#0b0f13;border:1px solid #242c34;margin-bottom:10px}.record-summary small{color:var(--muted)}.record-summary strong{display:block;margin-top:3px}
+.history-chart{height:155px;display:flex;align-items:flex-end;gap:7px;padding:18px 4px 4px;border-bottom:1px solid #27303a}.history-bar-wrap{flex:1;display:grid;align-items:end;justify-items:center;gap:5px;height:100%}.history-bar{width:min(28px,72%);border-radius:7px 7px 3px 3px;background:linear-gradient(#78ff9a,#2fe56a);min-height:8px}.history-bar-label{font-size:8px;color:#7f8a94;white-space:nowrap}.history-list{display:grid;gap:7px;margin-top:12px}.history-row{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #212830;font-size:11px}.history-row span{color:#8f99a2}.history-row strong{font-size:12px}.pr-card{display:flex;align-items:center;gap:12px;margin-top:14px;padding:14px;border:1px solid rgba(255,196,74,.18);background:rgba(255,196,74,.06);border-radius:15px}.pr-icon{width:42px;height:42px;border-radius:13px;background:rgba(255,196,74,.12);display:grid;place-items:center;font-size:22px}.pr-card small{display:block;color:#aeb5bc}.pr-card strong{font-size:19px}
+@media(max-width:390px){.brand-name{font-size:25px}.home-stats{gap:6px}.home-stat{padding:10px 4px}.day-cards{gap:6px}.day-card{padding:12px 8px;min-height:166px}.quick-grid{gap:6px}.exercise-v3-row{grid-template-columns:56px 1fr auto}.exercise-thumb{width:56px;height:56px}.detail-scroll{padding:15px}.detail-hero-demo{gap:5px}}
+
   </style>
   <title>MY FORM</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -120,23 +141,59 @@
 
     <main>
       <section class="screen active" data-screen="home">
-        <div class="hero card">
+        <section class="brand-card">
+          <img class="brand-logo" src="apple-touch-icon.png" alt="MY FORM">
+          <div class="brand-copy">
+            <div class="brand-name">MY <span>FORM</span></div>
+            <div class="brand-tag">Твоя форма. Твой прогресс.</div>
+          </div>
+        </section>
+
+        <div class="home-stats">
+          <div class="home-stat"><i>🔥</i><strong id="workoutCount">0</strong><small>тренировок</small></div>
+          <div class="home-stat"><i>📈</i><strong id="exerciseLoggedCount">0</strong><small>упражнений</small></div>
+          <div class="home-stat"><i>🏆</i><strong id="trainingWeeks">0</strong><small>недель</small></div>
+          <div class="home-stat"><i>📅</i><strong id="streakDays">0</strong><small>дней подряд</small></div>
+        </div>
+
+        <div class="home-section-title">
+          <div><h2>Тренировки 3/3</h2><small>3 тренировочных дня · прогресс сохраняется</small></div>
+        </div>
+        <div class="day-cards">
+          <article class="day-card a">
+            <b>День A</b><p>Грудь · плечи · трицепс</p><small>5 упражнений</small>
+            <button class="day-start" data-start-day="A">Начать →</button>
+          </article>
+          <article class="day-card b">
+            <b>День B</b><p>Ноги · задняя цепь</p><small>5 упражнений</small>
+            <button class="day-start" data-start-day="B">Начать →</button>
+          </article>
+          <article class="day-card c">
+            <b>День C</b><p>Спина · задняя дельта · бицепс</p><small>5 упражнений</small>
+            <button class="day-start" data-start-day="C">Начать →</button>
+          </article>
+        </div>
+
+        <div class="quick-grid">
+          <button class="quick-action" data-go="progress"><span>📊</span><small>Статистика</small></button>
+          <button class="quick-action" data-go="progress"><span>📏</span><small>Замеры</small></button>
+          <button class="quick-action" data-focus-weight><span>⚖️</span><small>Вес тела</small></button>
+          <button class="quick-action" data-open-settings><span>⚙️</span><small>Настройки</small></button>
+        </div>
+
+        <section class="card section-card">
+          <div class="section-head"><h2>Последние тренировки</h2><button class="text-btn" data-go="workouts">Все →</button></div>
+          <div class="recent-list" id="recentWorkouts"></div>
+        </section>
+
+        <section class="hero card" id="weightCard">
           <div>
             <span class="muted">Текущий вес</span>
             <div class="big-number"><span id="currentWeight">70.0</span><small> кг</small></div>
             <div class="goal-line">Цель: <strong id="goalWeightText">80 кг</strong></div>
           </div>
           <div class="ring" id="progressRing"><span id="ringText">0%</span></div>
-        </div>
-
-        <div class="grid two">
-          <button class="metric card tap" data-go="workouts">
-            <span class="metric-icon">🏋️</span><span class="muted">Тренировки</span><strong id="workoutCount">0</strong><small>зафиксировано</small>
-          </button>
-          <button class="metric card tap" data-go="nutrition">
-            <span class="metric-icon">🥗</span><span class="muted">Питание сегодня</span><strong><span id="caloriesToday">0</span> ккал</strong><small><span id="proteinToday">0</span> г белка</small>
-          </button>
-        </div>
+        </section>
 
         <section class="card section-card">
           <div class="section-head"><div><span class="muted">Быстрое действие</span><h2>Вес сегодня</h2></div><span class="pill">Набор массы</span></div>
@@ -148,23 +205,22 @@
         </section>
 
         <section class="card section-card">
-          <div class="section-head"><div><span class="muted">Сегодня</span><h2>Фокус</h2></div></div>
-          <div class="focus-list">
-            <div><span>💧</span><p><strong>Вода</strong><br><small>Не забывай пить в течение дня</small></p></div>
-            <div><span>🍚</span><p><strong>Профицит калорий</strong><br><small>Постепенно увеличиваем массу</small></p></div>
-            <div><span>😴</span><p><strong>Восстановление</strong><br><small>Сон влияет на рост не меньше тренировки</small></p></div>
-          </div>
+          <div class="section-head"><div><span class="muted">Сегодня</span><h2>Питание</h2></div><button class="text-btn" data-go="nutrition">Открыть →</button></div>
+          <div class="nutrition-total"><strong><span id="caloriesToday">0</span></strong><span>ккал</span><strong><span id="proteinToday">0</span></strong><span>г белка</span></div>
         </section>
       </section>
 
 
       <section class="screen" data-screen="workouts">
-        <section class="card section-card intro-card">
-          <div class="section-head">
-            <div><span class="muted">Программа набора массы</span><h2>Тренировки 3/3</h2></div>
-            <span class="pill">Возвращение</span>
+        <section class="card workout-hero">
+          <div class="workout-title-row">
+            <div class="workout-round-icon">🏋️</div>
+            <div><span class="muted">Программа набора массы</span><h2 id="workoutHeroTitle">День A</h2><small id="workoutHeroMuscles" class="muted">Грудь · плечи · трицепс</small></div>
           </div>
-          <p class="workout-note">Три тренировочных дня подряд, затем восстановление. Первые 2 недели не работаем в отказ: оставляй примерно 2–3 повтора в запасе и возвращай рабочие веса постепенно.</p>
+          <div class="workout-meta">
+            <div class="meta-box"><span>🎯 Цель</span><strong>Масса / рельеф</strong></div>
+            <div class="meta-box"><span>⏱ Время</span><strong id="dayDuration">≈ 55–70 мин</strong></div>
+          </div>
           <div class="day-switch" id="daySwitch">
             <button class="day-btn active" data-day="A">День A</button>
             <button class="day-btn" data-day="B">День B</button>
@@ -175,18 +231,18 @@
         <section class="card section-card">
           <div class="day-summary">
             <div><span class="muted" id="dayMuscles">Грудь · плечи · трицепс</span><h2 id="dayTitle">День A — Жимовой</h2></div>
-            <span class="cycle-tag" id="dayDuration">≈ 55–70 мин</span>
+            <span class="cycle-tag">первые 2 недели · RIR 2–3</span>
           </div>
           <div class="exercise-list" id="exerciseList"></div>
           <div class="training-footer">
-            <button class="primary full" id="logWorkoutBtn">Завершить тренировку A</button>
+            <button class="primary full" id="logWorkoutBtn">✓ Завершить тренировку A</button>
           </div>
         </section>
 
         <section class="card section-card">
-          <div class="section-head"><h2>Как это работает</h2><span class="muted">v0.2</span></div>
-          <div class="tags"><span>🎬 Техника движения</span><span>🏋️ Рабочий вес</span><span>🔁 Повторы</span><span>📈 История</span></div>
-          <p class="workout-note">Нажимай «Техника», чтобы посмотреть положение тела, траекторию и ошибки. «Записать» сохраняет рабочие подходы на этом iPhone.</p>
+          <div class="section-head"><h2>MY FORM</h2><span class="pill">v0.3</span></div>
+          <div class="tags"><span>🎬 Техника</span><span>🏋️ Подходы</span><span>📈 История</span><span>🏆 Личные рекорды</span></div>
+          <p class="workout-note">Открой любое упражнение: внутри теперь три вкладки — техника, запись подходов и история прогрессии.</p>
         </section>
       </section>
 
@@ -235,26 +291,60 @@
   </div>
 
 
-  <dialog id="techniqueDialog">
-    <div class="dialog-card tech-dialog">
-      <div class="tech-scroll">
-        <div class="section-head"><div><div class="tech-muscles" id="techMuscles"></div><h2 class="tech-title" id="techTitle">Упражнение</h2></div><button class="icon-btn" id="closeTechnique" aria-label="Закрыть">×</button></div>
-        <div class="movement-demo" id="movementDemo"></div>
-        <div class="exercise-prescription" id="techPrescription"></div>
-        <div class="tech-block"><h4>Как выполнять</h4><ol class="tech-list" id="techSteps"></ol></div>
-        <div class="tech-block"><h4>Частые ошибки</h4><ul class="tech-list warning-list" id="techMistakes"></ul></div>
-        <div class="tech-tip">Визуализация в этой версии — лёгкая встроенная схема «старт → финиш». Позже сюда можно поставить короткий зацикленный MP4 для каждого упражнения без изменения дневника тренировок.</div>
+  <dialog id="exerciseDialog">
+    <div class="dialog-card detail-dialog">
+      <div class="detail-scroll">
+        <div class="detail-head">
+          <div>
+            <div class="eyebrow">MY FORM · УПРАЖНЕНИЕ</div>
+            <h2 id="techTitle">Упражнение</h2>
+            <div class="detail-muscles" id="techMuscles"></div>
+          </div>
+          <button type="button" class="icon-btn" id="closeExerciseDialog" aria-label="Закрыть">×</button>
+        </div>
+
+        <div class="detail-tabs">
+          <button type="button" class="detail-tab active" data-detail-tab="technique">Техника</button>
+          <button type="button" class="detail-tab" data-detail-tab="record">Запись</button>
+          <button type="button" class="detail-tab" data-detail-tab="history">История</button>
+        </div>
+
+        <section class="detail-panel active" data-detail-panel="technique">
+          <div class="detail-hero-demo" id="movementDemo"></div>
+          <div class="exercise-prescription" id="techPrescription"></div>
+
+          <div class="tech-block">
+            <h4>Какие мышцы работают</h4>
+            <div class="muscle-pills">
+              <div class="muscle-pill"><div class="muscle-icon"></div><small id="muscleOne">Основная</small></div>
+              <div class="muscle-pill"><div class="muscle-icon"></div><small id="muscleTwo">Доп.</small></div>
+              <div class="muscle-pill"><div class="muscle-icon"></div><small id="muscleThree">Стабилизаторы</small></div>
+            </div>
+          </div>
+
+          <div class="tech-block"><h4>Пошаговое выполнение</h4><div class="step-list" id="techSteps"></div></div>
+          <div class="mistake-box"><h4>🔴 Частые ошибки</h4><div id="techMistakes"></div></div>
+        </section>
+
+        <section class="detail-panel" data-detail-panel="record">
+          <div class="record-summary"><small>Предыдущая запись</small><strong id="lastExerciseLog">Предыдущих записей нет.</strong></div>
+          <form id="exerciseLogForm">
+            <div class="set-grid" id="setInputs"></div>
+            <button class="primary full" type="submit">✓ Сохранить подходы</button>
+          </form>
+        </section>
+
+        <section class="detail-panel" data-detail-panel="history">
+          <div class="section-head"><div><span class="muted">Лучший подход по весу</span><h2>Прогресс упражнения</h2></div></div>
+          <div class="history-chart" id="exerciseHistoryChart"></div>
+          <div class="history-list" id="exerciseHistoryList"></div>
+          <div class="pr-card">
+            <div class="pr-icon">🏆</div>
+            <div><small>Личный рекорд</small><strong id="exercisePR">—</strong></div>
+          </div>
+        </section>
       </div>
     </div>
-  </dialog>
-
-  <dialog id="exerciseLogDialog">
-    <form class="dialog-card log-dialog" id="exerciseLogForm">
-      <div class="section-head"><div><span class="muted">Рабочие подходы</span><h2 id="logExerciseTitle">Упражнение</h2></div><button type="button" class="icon-btn" id="closeExerciseLog">×</button></div>
-      <div class="history-mini" id="lastExerciseLog">Предыдущих записей нет.</div>
-      <div class="set-grid" id="setInputs"></div>
-      <button class="primary full" type="submit">Сохранить подходы</button>
-    </form>
   </dialog>
 
   <dialog id="settingsDialog">
@@ -270,7 +360,11 @@
   <script>
 
 const STORAGE_KEY = 'myform.v01';
-const todayKey = () => new Date().toISOString().slice(0,10);
+function dateKeyLocal(d=new Date()){
+  const y=d.getFullYear(), m=String(d.getMonth()+1).padStart(2,'0'), day=String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${day}`;
+}
+const todayKey = () => dateKeyLocal(new Date());
 const defaultState = { startWeight:70, goalWeight:80, weights:[], workouts:[], meals:[], exerciseLogs:{} };
 let state = load();
 
@@ -325,11 +419,30 @@ function renderTrainingDay(){
   document.getElementById('dayTitle').textContent=plan.title;
   document.getElementById('dayMuscles').textContent=plan.muscles;
   document.getElementById('dayDuration').textContent=plan.duration;
-  document.getElementById('logWorkoutBtn').textContent=`Завершить тренировку ${selectedDay}`;
+  document.getElementById('workoutHeroTitle').textContent=`День ${selectedDay}`;
+  document.getElementById('workoutHeroMuscles').textContent=plan.muscles;
+  document.getElementById('logWorkoutBtn').textContent=`✓ Завершить тренировку ${selectedDay}`;
   document.querySelectorAll('.day-btn').forEach(b=>b.classList.toggle('active',b.dataset.day===selectedDay));
-  document.getElementById('exerciseList').innerHTML=plan.exercises.map((ex,i)=>`<article class="exercise-card"><div class="exercise-top"><div class="exercise-index">${i+1}</div><div class="exercise-main"><h3>${ex.name}</h3><p>${ex.muscles}</p></div></div><div class="exercise-prescription"><span class="mini-chip">${ex.sets} подхода</span><span class="mini-chip">${ex.reps} повторов</span><span class="mini-chip">Отдых ${ex.rest}</span></div><div class="exercise-last"><strong>${lastLogText(ex)}</strong></div><div class="exercise-actions"><button class="secondary tech" data-tech="${ex.id}">Техника</button><button class="secondary" data-log="${ex.id}">Записать</button></div></article>`).join('');
-  document.querySelectorAll('[data-tech]').forEach(b=>b.addEventListener('click',()=>openTechnique(b.dataset.tech)));
-  document.querySelectorAll('[data-log]').forEach(b=>b.addEventListener('click',()=>openExerciseLog(b.dataset.log)));
+  document.getElementById('exerciseList').innerHTML=plan.exercises.map((ex,i)=>`
+    <article class="exercise-card v3">
+      <div class="exercise-row-num">${i+1}</div>
+      <div class="exercise-v3-row">
+        <div class="exercise-thumb">${movementSvg(ex.visual,false)}</div>
+        <div class="exercise-v3-copy">
+          <h3>${ex.name}</h3>
+          <p>${ex.sets} подх. · ${ex.reps} повт. · отдых ${ex.rest}</p>
+          <div class="last-line">${lastLogText(ex)}</div>
+        </div>
+        <button class="tech-mini-btn" data-tech="${ex.id}">Техника</button>
+      </div>
+      <div class="exercise-bottom-actions">
+        <button class="secondary" data-log="${ex.id}">Записать подходы</button>
+        <button class="secondary" data-history="${ex.id}">История</button>
+      </div>
+    </article>`).join('');
+  document.querySelectorAll('[data-tech]').forEach(b=>b.addEventListener('click',()=>openExercise(b.dataset.tech,'technique')));
+  document.querySelectorAll('[data-log]').forEach(b=>b.addEventListener('click',()=>openExercise(b.dataset.log,'record')));
+  document.querySelectorAll('[data-history]').forEach(b=>b.addEventListener('click',()=>openExercise(b.dataset.history,'history')));
 }
 function findExercise(id){for(const p of Object.values(trainingPlans)){const ex=p.exercises.find(e=>e.id===id);if(ex)return ex;}return null;}
 function movementSvg(kind,end=false){
@@ -340,24 +453,109 @@ function movementSvg(kind,end=false){
   if(kind==='row') return `<svg viewBox="0 0 150 120" aria-hidden="true"><circle cx="55" cy="25" r="9" fill="none" stroke="${white}" stroke-width="4"/><line x1="58" y1="34" x2="73" y2="72" stroke="${white}" stroke-width="5"/><line x1="73" y1="72" x2="55" y2="107" stroke="${white}" stroke-width="5"/><line x1="72" y1="50" x2="${end?92:120}" y2="${end?54:54}" stroke="${green}" stroke-width="5"/><line x1="${end?92:120}" y1="54" x2="135" y2="54" stroke="${muted}" stroke-width="4"/></svg>`;
   return `<svg viewBox="0 0 150 120"><circle cx="75" cy="25" r="10" fill="none" stroke="${white}" stroke-width="4"/><line x1="75" y1="36" x2="75" y2="78" stroke="${white}" stroke-width="5"/><path d="M75 50 L${end?110:95} ${end?35:65}" stroke="${green}" stroke-width="5" stroke-linecap="round"/></svg>`;
 }
-function openTechnique(id){
-  const ex=findExercise(id); if(!ex)return;
+function splitMuscles(text){
+  const parts=text.split('·').map(x=>x.trim()).filter(Boolean);
+  return [parts[0]||'Основная',parts[1]||'Вспомогательная',parts[2]||'Стабилизаторы'];
+}
+function renderExerciseHistory(ex){
+  const logs=(state.exerciseLogs?.[ex.id]||[]).slice(-7);
+  const chart=document.getElementById('exerciseHistoryChart');
+  const list=document.getElementById('exerciseHistoryList');
+  const points=logs.map(log=>{
+    const useful=(log.sets||[]).filter(s=>Number(s.weight)>0);
+    const top=useful.length?useful.reduce((a,b)=>Number(b.weight)>Number(a.weight)?b:a):{weight:0,reps:0};
+    return {date:log.date,weight:Number(top.weight||0),reps:Number(top.reps||0)};
+  }).filter(x=>x.weight>0);
+  if(!points.length){
+    chart.innerHTML='<div class="empty-state">Пока нет данных для графика.</div>';
+    list.innerHTML='<div class="empty-state">Запиши первый рабочий подход — здесь появится история.</div>';
+    document.getElementById('exercisePR').textContent='—';
+    return;
+  }
+  const max=Math.max(...points.map(x=>x.weight),1);
+  chart.innerHTML=points.map(p=>{
+    const h=Math.max(12,Math.round((p.weight/max)*118));
+    const d=new Date(p.date).toLocaleDateString('ru-RU',{day:'2-digit',month:'2-digit'});
+    return `<div class="history-bar-wrap"><div class="history-bar" style="height:${h}px" title="${p.weight} кг × ${p.reps}"></div><div class="history-bar-label">${d}</div></div>`;
+  }).join('');
+  list.innerHTML=points.slice().reverse().map(p=>{
+    const d=new Date(p.date).toLocaleDateString('ru-RU',{day:'2-digit',month:'short',year:'numeric'});
+    return `<div class="history-row"><span>${d}</span><strong>${p.weight} кг × ${p.reps}</strong></div>`;
+  }).join('');
+  const pr=points.reduce((a,b)=>b.weight>a.weight?b:a,points[0]);
+  document.getElementById('exercisePR').textContent=`${pr.weight} кг × ${pr.reps}`;
+}
+function switchExerciseTab(tab){
+  document.querySelectorAll('.detail-tab').forEach(b=>b.classList.toggle('active',b.dataset.detailTab===tab));
+  document.querySelectorAll('.detail-panel').forEach(p=>p.classList.toggle('active',p.dataset.detailPanel===tab));
+  if(tab==='history' && activeLogExercise) renderExerciseHistory(activeLogExercise);
+}
+function openExercise(id,tab='technique'){
+  const ex=findExercise(id); if(!ex)return; activeLogExercise=ex;
   document.getElementById('techTitle').textContent=ex.name;
   document.getElementById('techMuscles').textContent=ex.muscles;
-  document.getElementById('techPrescription').innerHTML=`<span class="mini-chip">${ex.sets} подхода</span><span class="mini-chip">${ex.reps}</span><span class="mini-chip">Отдых ${ex.rest}</span>`;
-  document.getElementById('techSteps').innerHTML=ex.steps.map(x=>`<li>${x}</li>`).join('');
-  document.getElementById('techMistakes').innerHTML=ex.mistakes.map(x=>`<li>${x}</li>`).join('');
-  document.getElementById('movementDemo').innerHTML=`<div class="demo-frame"><div class="demo-label">СТАРТ</div>${movementSvg(ex.visual,false)}</div><div class="demo-frame"><div class="demo-label">ФИНИШ</div>${movementSvg(ex.visual,true)}</div>`;
-  document.getElementById('techniqueDialog').showModal();
-}
-function openExerciseLog(id){
-  const ex=findExercise(id); if(!ex)return; activeLogExercise=ex;
-  document.getElementById('logExerciseTitle').textContent=ex.name;
+  document.getElementById('techPrescription').innerHTML=`<span class="mini-chip">${ex.sets} подхода</span><span class="mini-chip">${ex.reps} повторов</span><span class="mini-chip">Отдых ${ex.rest}</span>`;
+
+  const muscles=splitMuscles(ex.muscles);
+  document.getElementById('muscleOne').textContent=muscles[0];
+  document.getElementById('muscleTwo').textContent=muscles[1];
+  document.getElementById('muscleThree').textContent=muscles[2];
+
+  document.getElementById('techSteps').innerHTML=ex.steps.map((x,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><p>${x}</p></div>`).join('');
+  document.getElementById('techMistakes').innerHTML=ex.mistakes.map(x=>`<div class="mistake-item"><b>•</b><span>${x}</span></div>`).join('');
+  document.getElementById('movementDemo').innerHTML=`
+    <div class="demo-frame"><div class="demo-label">СТАРТ</div>${movementSvg(ex.visual,false)}<div class="stage-badge">1</div></div>
+    <div class="demo-frame"><div class="demo-label">ДВИЖЕНИЕ</div>${movementSvg(ex.visual,true)}<div class="stage-badge">2</div></div>
+    <div class="demo-frame"><div class="demo-label">ФИНИШ</div>${movementSvg(ex.visual,false)}<div class="stage-badge">3</div></div>`;
+
   document.getElementById('lastExerciseLog').textContent=lastLogText(ex);
   let rows='<div></div><div class="head">кг</div><div class="head">повт.</div>';
-  for(let i=1;i<=ex.sets;i++) rows+=`<div class="set-num">${i}</div><input inputmode="decimal" step="0.5" min="0" type="number" name="w${i}" placeholder="0"><input inputmode="numeric" min="0" type="number" name="r${i}" placeholder="${ex.reps.split('–')[0]}">`;
+  const previous=latestExerciseLog(ex.id);
+  for(let i=1;i<=ex.sets;i++){
+    const prev=previous?.sets?.[i-1]||{};
+    rows+=`<div class="set-num">${i}</div><input inputmode="decimal" step="0.5" min="0" type="number" name="w${i}" value="${prev.weight||''}" placeholder="кг"><input inputmode="numeric" min="0" type="number" name="r${i}" value="${prev.reps||''}" placeholder="${ex.reps.split('–')[0]}">`;
+  }
   document.getElementById('setInputs').innerHTML=rows;
-  document.getElementById('exerciseLogDialog').showModal();
+  renderExerciseHistory(ex);
+  switchExerciseTab(tab);
+  document.getElementById('exerciseDialog').showModal();
+}
+function openTechnique(id){openExercise(id,'technique');}
+function openExerciseLog(id){openExercise(id,'record');}
+
+function renderHomeStats(){
+  const uniqueExercises=Object.entries(state.exerciseLogs||{}).filter(([,logs])=>Array.isArray(logs)&&logs.length).length;
+  const dates=(state.workouts||[]).map(w=>w.date?dateKeyLocal(new Date(w.date)):null).filter(Boolean);
+  const uniqueDates=[...new Set(dates)].sort();
+  let weeks=0;
+  if(uniqueDates.length){
+    const first=new Date(uniqueDates[0]+'T12:00:00');
+    const now=new Date();
+    weeks=Math.max(1,Math.ceil((now-first)/(7*86400000)));
+  }
+  let streak=0;
+  const set=new Set(uniqueDates);
+  let cursor=new Date();
+  for(let i=0;i<30;i++){
+    const key=dateKeyLocal(cursor);
+    if(set.has(key)){streak++;cursor.setDate(cursor.getDate()-1);}
+    else if(i===0){cursor.setDate(cursor.getDate()-1);}
+    else break;
+  }
+  document.getElementById('exerciseLoggedCount').textContent=uniqueExercises;
+  document.getElementById('trainingWeeks').textContent=weeks;
+  document.getElementById('streakDays').textContent=streak;
+}
+function renderRecentWorkouts(){
+  const el=document.getElementById('recentWorkouts');
+  const items=(state.workouts||[]).slice(-4).reverse();
+  if(!items.length){el.innerHTML='<div class="empty-state">Здесь будут появляться завершённые тренировки.</div>';return;}
+  el.innerHTML=items.map(w=>{
+    const day=w.day||'—';
+    const plan=trainingPlans[day];
+    const date=new Date(w.date).toLocaleDateString('ru-RU',{day:'2-digit',month:'short',year:'numeric'});
+    return `<div class="recent-item"><div class="left"><div class="recent-badge">${day}</div><div><strong>День ${day}</strong><small>${plan?.muscles||'Тренировка'} · ${date}</small></div></div><span style="color:var(--accent)">✓</span></div>`;
+  }).join('');
 }
 
 function go(screen){
@@ -371,15 +569,18 @@ document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
 
 document.querySelectorAll('.day-btn').forEach(b=>b.addEventListener('click',()=>{selectedDay=b.dataset.day;renderTrainingDay();}));
-document.getElementById('closeTechnique').addEventListener('click',()=>document.getElementById('techniqueDialog').close());
-document.getElementById('closeExerciseLog').addEventListener('click',()=>document.getElementById('exerciseLogDialog').close());
+document.querySelectorAll('[data-start-day]').forEach(b=>b.addEventListener('click',()=>{selectedDay=b.dataset.startDay;go('workouts');renderTrainingDay();}));
+document.querySelectorAll('[data-detail-tab]').forEach(b=>b.addEventListener('click',()=>switchExerciseTab(b.dataset.detailTab)));
+document.getElementById('closeExerciseDialog').addEventListener('click',()=>document.getElementById('exerciseDialog').close());
+document.querySelectorAll('[data-open-settings]').forEach(b=>b.addEventListener('click',()=>document.getElementById('settingsBtn').click()));
+document.querySelectorAll('[data-focus-weight]').forEach(b=>b.addEventListener('click',()=>document.getElementById('weightCard').scrollIntoView({behavior:'smooth',block:'center'})));
 document.getElementById('exerciseLogForm').addEventListener('submit',e=>{
   e.preventDefault(); if(!activeLogExercise)return;
   const form=new FormData(e.target); const sets=[];
   for(let i=1;i<=activeLogExercise.sets;i++) sets.push({weight:Number(form.get(`w${i}`)||0),reps:Number(form.get(`r${i}`)||0)});
   state.exerciseLogs ||= {}; state.exerciseLogs[activeLogExercise.id] ||= [];
   state.exerciseLogs[activeLogExercise.id].push({date:new Date().toISOString(),day:selectedDay,sets});
-  save(); document.getElementById('exerciseLogDialog').close(); renderTrainingDay(); toast('Подходы сохранены');
+  save(); renderTrainingDay(); renderExerciseHistory(activeLogExercise); switchExerciseTab('history'); toast('Подходы сохранены');
 });
 
 
@@ -395,7 +596,7 @@ document.getElementById('mealForm').addEventListener('submit',e=>{
 });
 
 document.getElementById('clearMeals').addEventListener('click',()=>{ state.meals=state.meals.filter(m=>m.date!==todayKey()); save(); });
-document.getElementById('logWorkoutBtn').addEventListener('click',()=>{ const today=todayKey(); const exists=state.workouts.some(w=>w.date?.slice(0,10)===today&&w.day===selectedDay); if(!exists) state.workouts.push({date:new Date().toISOString(),day:selectedDay}); save(); renderTrainingDay(); toast(exists?'Эта тренировка уже отмечена сегодня':`Тренировка ${selectedDay} завершена`); });
+document.getElementById('logWorkoutBtn').addEventListener('click',()=>{ const today=todayKey(); const exists=state.workouts.some(w=>w.date&&dateKeyLocal(new Date(w.date))===today&&w.day===selectedDay); if(!exists) state.workouts.push({date:new Date().toISOString(),day:selectedDay}); save(); renderTrainingDay(); toast(exists?'Эта тренировка уже отмечена сегодня':`Тренировка ${selectedDay} завершена`); });
 
 const dlg=document.getElementById('settingsDialog');
 document.getElementById('settingsBtn').addEventListener('click',()=>{ document.getElementById('startWeightSetting').value=state.startWeight; document.getElementById('goalWeightSetting').value=state.goalWeight; dlg.showModal(); });
@@ -410,7 +611,7 @@ function render(){
   ['caloriesToday','nutritionCalories'].forEach(id=>document.getElementById(id).textContent=Math.round(c)); ['proteinToday','nutritionProtein'].forEach(id=>document.getElementById(id).textContent=Math.round(pr));
   const gain=w-start; document.getElementById('totalGain').textContent=(gain>=0?'+':'')+fmt(gain)+' кг'; document.getElementById('toGoal').textContent=fmt(Math.max(0,goal-w))+' кг'; document.getElementById('chartStart').textContent=fmt(start)+' кг'; document.getElementById('chartNow').textContent=fmt(w)+' кг';
   document.getElementById('progressBadge').textContent=gain>0?('+'+fmt(gain)+' кг'):'Старт'; document.getElementById('weightDelta').textContent=state.weights.length?`Последнее измерение: ${fmt(w)} кг · изменение от старта ${gain>=0?'+':''}${fmt(gain)} кг`:'Добавь первое измерение — построим прогресс.';
-  renderMeals(meals); renderChart(); renderTrainingDay();
+  renderMeals(meals); renderChart(); renderTrainingDay(); renderHomeStats(); renderRecentWorkouts();
 }
 
 function renderMeals(meals){ const el=document.getElementById('mealList'); if(!meals.length){el.className='empty-state';el.textContent='Пока записей нет.';return;} el.className=''; el.innerHTML=meals.map(m=>`<div class="meal-item"><div><strong>${escapeHtml(m.name)}</strong><br><small>${Math.round(m.calories)} ккал · ${Math.round(m.protein)} г белка</small></div></div>`).join(''); }
