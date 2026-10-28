@@ -149,6 +149,11 @@
 .set-grid.v4{grid-template-columns:34px 1fr 1fr}.set-grid.v4 input{padding:12px 8px}
 @media(max-width:390px){.photo-step{border-radius:15px}.timer-time{font-size:30px}.history-kpi strong{font-size:15px}}
 
+
+/* v0.5 — real technique thumbnails in workout list */
+.exercise-thumb img{width:100%;height:100%;display:block;object-fit:cover}
+.exercise-thumb.photo{background:#090d11;border-color:rgba(101,245,140,.28)}
+
   </style>
   <title>MY FORM</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -277,7 +282,7 @@
         </section>
 
         <section class="card section-card">
-          <div class="section-head"><h2>MY FORM</h2><span class="pill">v0.4</span></div>
+          <div class="section-head"><h2>MY FORM</h2><span class="pill">v0.5</span></div>
           <div class="tags"><span>🎬 Техника</span><span>🏋️ Подходы</span><span>📈 История</span><span>🏆 Личные рекорды</span></div>
           <p class="workout-note">Открой любое упражнение: внутри теперь три вкладки — техника, запись подходов и история прогрессии.</p>
         </section>
@@ -508,7 +513,7 @@ function renderTrainingDay(){
     <article class="exercise-card v3">
       <div class="exercise-row-num">${i+1}</div>
       <div class="exercise-v3-row">
-        <div class="exercise-thumb">${movementSvg(ex.visual,false)}</div>
+        <div class="exercise-thumb ${TECH_MEDIA[ex.id]?'photo':''}">${TECH_MEDIA[ex.id]?`<img src="${TECH_MEDIA[ex.id][0]}" alt="${ex.name}">`:movementSvg(ex.visual,false)}</div>
         <div class="exercise-v3-copy">
           <h3>${ex.name}</h3>
           <p>${ex.sets} подх. · ${ex.reps} повт. · отдых ${ex.rest}</p>
