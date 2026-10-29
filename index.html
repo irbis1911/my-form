@@ -166,6 +166,24 @@
 .backup-status.ok{color:var(--accent)}
 .backup-status.error{color:#ff7b74}
 
+
+/* MY FORM v0.9 — workout history */
+.history-launch{width:100%;margin-top:10px;border:1px solid #2a343d;background:#11171d;color:#eef2f5;border-radius:14px;padding:13px;font-weight:850}
+.workout-history-list{display:grid;gap:9px;margin-top:10px}
+.workout-history-card{padding:13px;border-radius:16px;background:#0b0f13;border:1px solid #252e37}
+.workout-history-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.workout-history-top h3{margin:0 0 3px;font-size:15px}.workout-history-top small{color:#8e98a2}
+.workout-history-actions{display:flex;gap:7px;margin-top:10px}.workout-history-actions button{flex:1}
+.history-exercise-list{display:grid;gap:9px;margin-top:12px}
+.history-exercise-card{padding:12px;border-radius:15px;background:#0a0e12;border:1px solid #242d35}
+.history-exercise-card h4{margin:0 0 7px;font-size:14px}
+.history-set-pills{display:flex;gap:6px;flex-wrap:wrap}.history-set-pill{padding:6px 8px;border-radius:9px;background:#151c22;border:1px solid #2a343d;font-size:10px;color:#d5dce1}
+.history-note-line{margin-top:7px;color:#8f99a2;font-size:10px;line-height:1.4}
+.edit-log-grid{display:grid;grid-template-columns:34px 1fr 1fr;gap:8px;align-items:center;margin:9px 0}
+.edit-log-grid .head{font-size:10px;color:#7f8994;text-align:center}
+.danger-btn{border:1px solid rgba(255,107,107,.34);background:rgba(255,107,107,.08);color:#ff8a84;border-radius:12px;padding:10px;font-weight:800}
+.history-empty-card{padding:18px;text-align:center;color:#89939d}
+
   </style>
   <title>MY FORM</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -236,7 +254,7 @@
         </div>
 
         <section class="card section-card">
-          <div class="section-head"><h2>Последние тренировки</h2><button class="text-btn" data-go="workouts">Все →</button></div>
+          <div class="section-head"><h2>Последние тренировки</h2><button class="text-btn" id="openWorkoutHistoryBtn">Все →</button></div>
           <div class="recent-list" id="recentWorkouts"></div>
         </section>
 
@@ -294,7 +312,7 @@
         </section>
 
         <section class="card section-card">
-          <div class="section-head"><h2>MY FORM</h2><span class="pill">v0.8</span></div>
+          <div class="section-head"><h2>MY FORM</h2><span class="pill">v0.9</span></div>
           <div class="tags"><span>🎬 Техника</span><span>🏋️ Подходы</span><span>📈 История</span><span>🏆 Личные рекорды</span></div>
           <p class="workout-note">Открой любое упражнение: внутри теперь три вкладки — техника, запись подходов и история прогрессии.</p>
         </section>
@@ -434,6 +452,56 @@
     </div>
   </dialog>
 
+  <dialog id="workoutHistoryDialog">
+    <div class="dialog-card detail-dialog">
+      <div class="detail-scroll">
+        <div class="detail-head">
+          <div>
+            <div class="eyebrow">MY FORM · ИСТОРИЯ</div>
+            <h2>Тренировки</h2>
+            <div class="detail-muscles">Завершённые тренировки и записанные подходы</div>
+          </div>
+          <button type="button" class="icon-btn" id="closeWorkoutHistory" aria-label="Закрыть">×</button>
+        </div>
+        <div class="workout-history-list" id="workoutHistoryList"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="workoutDetailDialog">
+    <div class="dialog-card detail-dialog">
+      <div class="detail-scroll">
+        <div class="detail-head">
+          <div>
+            <div class="eyebrow">MY FORM · ТРЕНИРОВКА</div>
+            <h2 id="workoutDetailTitle">Тренировка</h2>
+            <div class="detail-muscles" id="workoutDetailDate"></div>
+          </div>
+          <button type="button" class="icon-btn" id="closeWorkoutDetail" aria-label="Закрыть">×</button>
+        </div>
+        <div class="history-exercise-list" id="workoutDetailExercises"></div>
+        <button type="button" class="danger-btn" id="deleteWorkoutBtn" style="width:100%;margin-top:14px">Удалить эту тренировку</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="editExerciseLogDialog">
+    <div class="dialog-card">
+      <div class="section-head">
+        <div><span class="muted">Редактирование</span><h2 id="editLogTitle">Подходы</h2></div>
+        <button type="button" class="icon-btn" id="closeEditLog">×</button>
+      </div>
+      <form id="editExerciseLogForm">
+        <div class="edit-log-grid" id="editLogInputs"></div>
+        <label class="note-label">Заметка
+          <textarea id="editLogNote" placeholder="Заметка к этой записи…"></textarea>
+        </label>
+        <button class="primary full" type="submit">Сохранить изменения</button>
+      </form>
+      <button type="button" class="danger-btn" id="deleteExerciseLogBtn">Удалить эту запись упражнения</button>
+    </div>
+  </dialog>
+
   <dialog id="settingsDialog">
     <form method="dialog" class="dialog-card" id="settingsForm">
       <div class="section-head"><h2>Настройки</h2><button class="icon-btn" value="cancel">×</button></div>
@@ -471,7 +539,7 @@ function load(){ try { return {...defaultState, ...(JSON.parse(localStorage.getI
 function save(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); render(); }
 
 const BACKUP_FORMAT_VERSION = 1;
-const APP_VERSION = '0.8';
+const APP_VERSION = '0.9';
 
 function backupCounts(data){
   const exerciseLogs=data.exerciseLogs && typeof data.exerciseLogs==='object' ? data.exerciseLogs : {};
@@ -639,6 +707,30 @@ let restTimerRunning = false;
 
 let selectedDay='A';
 let activeLogExercise=null;
+
+let activeWorkoutHistoryIndex=null;
+let activeWorkoutKey=null;
+let activeEditLogRef=null;
+
+function localDateFromISO(iso){
+  return iso ? dateKeyLocal(new Date(iso)) : '';
+}
+function workoutKey(workout){
+  return `${localDateFromISO(workout.date)}|${workout.day||''}`;
+}
+function exerciseLogsForWorkout(workout){
+  const key=workoutKey(workout);
+  const out=[];
+  Object.entries(state.exerciseLogs||{}).forEach(([exerciseId,logs])=>{
+    (logs||[]).forEach((log,index)=>{
+      if(`${localDateFromISO(log.date)}|${log.day||''}`===key){
+        out.push({exerciseId,index,log,exercise:findExercise(exerciseId)});
+      }
+    });
+  });
+  return out.sort((a,b)=>new Date(a.log.date)-new Date(b.log.date));
+}
+
 
 function latestExerciseLog(id){
   const arr=state.exerciseLogs?.[id]||[];
@@ -825,14 +917,18 @@ function renderHomeStats(){
 }
 function renderRecentWorkouts(){
   const el=document.getElementById('recentWorkouts');
-  const items=(state.workouts||[]).slice(-4).reverse();
+  const items=(state.workouts||[]).map((w,index)=>({w,index})).slice(-4).reverse();
   if(!items.length){el.innerHTML='<div class="empty-state">Здесь будут появляться завершённые тренировки.</div>';return;}
-  el.innerHTML=items.map(w=>{
+  el.innerHTML=items.map(({w,index})=>{
     const day=w.day||'—';
     const plan=trainingPlans[day];
     const date=new Date(w.date).toLocaleDateString('ru-RU',{day:'2-digit',month:'short',year:'numeric'});
-    return `<div class="recent-item"><div class="left"><div class="recent-badge">${day}</div><div><strong>День ${day}</strong><small>${plan?.muscles||'Тренировка'} · ${date}</small></div></div><span style="color:var(--accent)">✓</span></div>`;
+    return `<button class="recent-item" data-open-workout="${index}" style="width:100%;color:inherit;text-align:left">
+      <div class="left"><div class="recent-badge">${day}</div><div><strong>День ${day}</strong><small>${plan?.muscles||'Тренировка'} · ${date}</small></div></div>
+      <span style="color:var(--accent)">›</span>
+    </button>`;
   }).join('');
+  document.querySelectorAll('[data-open-workout]').forEach(b=>b.addEventListener('click',()=>openWorkoutDetail(Number(b.dataset.openWorkout))));
 }
 
 
@@ -884,6 +980,94 @@ function toggleRestTimer(){
   renderRestTimer();
 }
 
+
+function renderWorkoutHistory(){
+  const el=document.getElementById('workoutHistoryList');
+  const items=(state.workouts||[]).map((w,index)=>({w,index})).reverse();
+  if(!items.length){
+    el.innerHTML='<div class="history-empty-card">Пока нет завершённых тренировок.</div>';
+    return;
+  }
+  el.innerHTML=items.map(({w,index})=>{
+    const day=w.day||'—', plan=trainingPlans[day];
+    const date=new Date(w.date).toLocaleDateString('ru-RU',{day:'2-digit',month:'long',year:'numeric'});
+    const logs=exerciseLogsForWorkout(w);
+    const setCount=logs.reduce((n,x)=>n+(x.log.sets||[]).filter(s=>Number(s.weight)>0||Number(s.reps)>0).length,0);
+    return `<article class="workout-history-card">
+      <div class="workout-history-top">
+        <div><h3>День ${day} · ${plan?.title?.replace(/^День . — /,'')||'Тренировка'}</h3><small>${date} · ${logs.length} упр. · ${setCount} подходов</small></div>
+        <span class="pill">${day}</span>
+      </div>
+      <div class="workout-history-actions">
+        <button class="secondary" data-history-open="${index}">Открыть</button>
+      </div>
+    </article>`;
+  }).join('');
+  document.querySelectorAll('[data-history-open]').forEach(b=>b.addEventListener('click',()=>openWorkoutDetail(Number(b.dataset.historyOpen))));
+}
+function openWorkoutHistory(){
+  renderWorkoutHistory();
+  document.getElementById('workoutHistoryDialog').showModal();
+}
+function openWorkoutDetail(index){
+  const workout=state.workouts[index];
+  if(!workout)return;
+  activeWorkoutHistoryIndex=index;
+  activeWorkoutKey=workoutKey(workout);
+  const day=workout.day||'—', plan=trainingPlans[day];
+  document.getElementById('workoutDetailTitle').textContent=plan?.title||`День ${day}`;
+  document.getElementById('workoutDetailDate').textContent=new Date(workout.date).toLocaleString('ru-RU',{day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  const logs=exerciseLogsForWorkout(workout);
+  const el=document.getElementById('workoutDetailExercises');
+  if(!logs.length){
+    el.innerHTML='<div class="history-empty-card">У этой тренировки нет записанных подходов.</div>';
+  }else{
+    el.innerHTML=logs.map(({exerciseId,index:logIndex,log,exercise})=>{
+      const sets=(log.sets||[]).filter(s=>Number(s.weight)>0||Number(s.reps)>0);
+      const setHtml=sets.length?sets.map((s,i)=>`<span class="history-set-pill">${i+1}: ${s.weight||0} кг × ${s.reps||0}</span>`).join(''):'<span class="history-set-pill">Подходы пустые</span>';
+      return `<article class="history-exercise-card">
+        <h4>${exercise?.name||exerciseId}</h4>
+        <div class="history-set-pills">${setHtml}</div>
+        ${log.note?`<div class="history-note-line">${escapeHtml(log.note)}</div>`:''}
+        <div class="workout-history-actions">
+          <button class="secondary" data-edit-exercise-log="${exerciseId}" data-edit-log-index="${logIndex}">Изменить</button>
+        </div>
+      </article>`;
+    }).join('');
+    document.querySelectorAll('[data-edit-exercise-log]').forEach(b=>b.addEventListener('click',()=>{
+      openEditExerciseLog(b.dataset.editExerciseLog,Number(b.dataset.editLogIndex));
+    }));
+  }
+  document.getElementById('workoutHistoryDialog').close();
+  document.getElementById('workoutDetailDialog').showModal();
+}
+function openEditExerciseLog(exerciseId,logIndex){
+  const ex=findExercise(exerciseId);
+  const logs=state.exerciseLogs?.[exerciseId]||[];
+  const log=logs[logIndex];
+  if(!log)return;
+  activeEditLogRef={exerciseId,logIndex};
+  document.getElementById('editLogTitle').textContent=ex?.name||exerciseId;
+  let rows='<div></div><div class="head">кг</div><div class="head">повт.</div>';
+  const count=Math.max(ex?.sets||0,(log.sets||[]).length,1);
+  for(let i=0;i<count;i++){
+    const s=log.sets?.[i]||{};
+    rows+=`<div class="set-num">${i+1}</div><input inputmode="decimal" step="0.5" min="0" type="number" name="w${i}" value="${s.weight||''}" placeholder="кг"><input inputmode="numeric" min="0" type="number" name="r${i}" value="${s.reps||''}" placeholder="повт.">`;
+  }
+  document.getElementById('editLogInputs').innerHTML=rows;
+  document.getElementById('editLogNote').value=log.note||'';
+  document.getElementById('workoutDetailDialog').close();
+  document.getElementById('editExerciseLogDialog').showModal();
+}
+function refreshWorkoutDialogs(){
+  render();
+  if(activeWorkoutHistoryIndex!=null && state.workouts[activeWorkoutHistoryIndex]){
+    openWorkoutDetail(activeWorkoutHistoryIndex);
+  }else{
+    openWorkoutHistory();
+  }
+}
+
 function go(screen){
   document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.dataset.screen===screen));
   document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===screen));
@@ -908,6 +1092,62 @@ document.getElementById('restTimerReset').addEventListener('click',()=>selectRes
 
 document.getElementById('closeExerciseDialog').addEventListener('click',()=>document.getElementById('exerciseDialog').close());
 document.querySelectorAll('[data-open-settings]').forEach(b=>b.addEventListener('click',()=>document.getElementById('settingsBtn').click()));
+
+document.getElementById('openWorkoutHistoryBtn').addEventListener('click',openWorkoutHistory);
+document.getElementById('closeWorkoutHistory').addEventListener('click',()=>document.getElementById('workoutHistoryDialog').close());
+document.getElementById('closeWorkoutDetail').addEventListener('click',()=>document.getElementById('workoutDetailDialog').close());
+document.getElementById('closeEditLog').addEventListener('click',()=>{
+  document.getElementById('editExerciseLogDialog').close();
+  if(activeWorkoutHistoryIndex!=null && state.workouts[activeWorkoutHistoryIndex]) openWorkoutDetail(activeWorkoutHistoryIndex);
+});
+document.getElementById('editExerciseLogForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  if(!activeEditLogRef)return;
+  const {exerciseId,logIndex}=activeEditLogRef;
+  const log=state.exerciseLogs?.[exerciseId]?.[logIndex];
+  if(!log)return;
+  const fd=new FormData(e.target);
+  const count=document.getElementById('editLogInputs').querySelectorAll('.set-num').length;
+  const sets=[];
+  for(let i=0;i<count;i++) sets.push({weight:Number(fd.get(`w${i}`)||0),reps:Number(fd.get(`r${i}`)||0)});
+  log.sets=sets;
+  log.note=document.getElementById('editLogNote').value.trim();
+  save();
+  document.getElementById('editExerciseLogDialog').close();
+  toast('Запись исправлена');
+  if(activeWorkoutHistoryIndex!=null && state.workouts[activeWorkoutHistoryIndex]) openWorkoutDetail(activeWorkoutHistoryIndex);
+});
+document.getElementById('deleteExerciseLogBtn').addEventListener('click',()=>{
+  if(!activeEditLogRef)return;
+  if(!confirm('Удалить эту запись упражнения? Остальные данные тренировки сохранятся.')) return;
+  const {exerciseId,logIndex}=activeEditLogRef;
+  const arr=state.exerciseLogs?.[exerciseId];
+  if(Array.isArray(arr)){
+    arr.splice(logIndex,1);
+    if(!arr.length) delete state.exerciseLogs[exerciseId];
+  }
+  save();
+  document.getElementById('editExerciseLogDialog').close();
+  toast('Запись упражнения удалена');
+  if(activeWorkoutHistoryIndex!=null && state.workouts[activeWorkoutHistoryIndex]) openWorkoutDetail(activeWorkoutHistoryIndex);
+});
+document.getElementById('deleteWorkoutBtn').addEventListener('click',()=>{
+  if(activeWorkoutHistoryIndex==null || !state.workouts[activeWorkoutHistoryIndex])return;
+  if(!confirm('Удалить всю эту тренировку и все подходы, записанные в этот день?')) return;
+  const workout=state.workouts[activeWorkoutHistoryIndex];
+  const key=workoutKey(workout);
+  Object.keys(state.exerciseLogs||{}).forEach(exerciseId=>{
+    state.exerciseLogs[exerciseId]=(state.exerciseLogs[exerciseId]||[]).filter(log=>`${localDateFromISO(log.date)}|${log.day||''}`!==key);
+    if(!state.exerciseLogs[exerciseId].length) delete state.exerciseLogs[exerciseId];
+  });
+  state.workouts.splice(activeWorkoutHistoryIndex,1);
+  activeWorkoutHistoryIndex=null; activeWorkoutKey=null;
+  save();
+  document.getElementById('workoutDetailDialog').close();
+  toast('Тренировка удалена');
+  openWorkoutHistory();
+});
+
 document.querySelectorAll('[data-focus-weight]').forEach(b=>b.addEventListener('click',()=>document.getElementById('weightCard').scrollIntoView({behavior:'smooth',block:'center'})));
 document.getElementById('exerciseLogForm').addEventListener('submit',e=>{
   e.preventDefault(); if(!activeLogExercise)return;
