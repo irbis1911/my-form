@@ -184,6 +184,43 @@
 .danger-btn{border:1px solid rgba(255,107,107,.34);background:rgba(255,107,107,.08);color:#ff8a84;border-radius:12px;padding:10px;font-weight:800}
 .history-empty-card{padding:18px;text-align:center;color:#89939d}
 
+
+/* MY FORM v1.0 — live workout */
+.live-workout-dialog{width:min(100vw,560px);height:100dvh;max-height:100dvh;margin:0 auto;border-radius:0;background:#080a0d}
+.live-workout-shell{height:100%;display:flex;flex-direction:column;background:linear-gradient(180deg,#0d1217,#080a0d 32%)}
+.live-top{padding:calc(14px + env(safe-area-inset-top)) 16px 10px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #202832;background:rgba(8,10,13,.94);backdrop-filter:blur(18px)}
+.live-back{width:42px;height:42px;border:1px solid #2a343d;background:#11171d;color:#eef2f5;border-radius:14px;font-size:20px}
+.live-top-copy{min-width:0;flex:1}.live-top-copy small{color:var(--accent);font-weight:850;letter-spacing:.08em}.live-top-copy h2{margin:2px 0 0;font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.live-progress-text{font-size:11px;color:#8e98a2;text-align:right}.live-progress-bar{height:5px;background:#1d252d}.live-progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .25s ease}
+.live-body{flex:1;overflow:auto;padding:14px 16px calc(118px + env(safe-area-inset-bottom))}
+.live-exercise-hero{overflow:hidden;border-radius:22px;border:1px solid #26303a;background:#0b0f13}
+.live-exercise-media{height:188px;background:radial-gradient(circle at 50% 45%,rgba(101,245,140,.13),transparent 60%),#090d11;display:grid;place-items:center;overflow:hidden}
+.live-exercise-media img{width:100%;height:100%;object-fit:cover}.live-exercise-media svg{width:72%;height:72%}
+.live-exercise-info{padding:15px}.live-exercise-info h2{margin:2px 0 4px;font-size:22px}.live-exercise-info p{margin:0;color:#8f99a2;font-size:12px;line-height:1.4}
+.live-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.live-chip{padding:7px 9px;border-radius:10px;background:#151b21;border:1px solid #28323b;color:#cbd3d9;font-size:10px}
+.live-prev{margin-top:12px;padding:12px 13px;border-radius:15px;background:rgba(101,245,140,.055);border:1px solid rgba(101,245,140,.16)}
+.live-prev small{color:#8d989f}.live-prev strong{display:block;margin-top:4px;font-size:12px;line-height:1.45}
+.live-sets{margin-top:14px;display:grid;gap:8px}.live-set-head,.live-set-row{display:grid;grid-template-columns:34px 1fr 1fr 42px;gap:7px;align-items:center}
+.live-set-head{color:#7f8992;font-size:9px;text-align:center;padding:0 2px}.live-set-num{width:32px;height:32px;border-radius:10px;background:#11171d;border:1px solid #27313a;display:grid;place-items:center;color:var(--accent);font-weight:900}
+.live-set-row input{padding:12px 7px;text-align:center}.live-set-done{width:40px;height:40px;border-radius:12px;border:1px solid #33404a;background:#151c22;color:#a9b3bb;font-weight:900}
+.live-set-row.done .live-set-done{background:var(--accent);border-color:var(--accent);color:#061108}.live-set-row.done input{border-color:rgba(101,245,140,.28);background:#0e1512}
+.live-note{display:grid;gap:6px;margin-top:12px;color:#8f99a2;font-size:10px}.live-note textarea{width:100%;min-height:64px;resize:none;background:#0a0e12;color:#eef2f5;border:1px solid #27313a;border-radius:13px;padding:11px;font:inherit}
+.live-recommendation{margin-top:13px;padding:13px;border-radius:16px;border:1px solid #29343d;background:#0c1116;display:none}.live-recommendation.show{display:block}
+.live-recommendation small{color:#8c969f}.live-recommendation strong{display:block;margin-top:4px;line-height:1.4}.live-recommendation.up{border-color:rgba(101,245,140,.28);background:rgba(101,245,140,.055)}
+.live-recommendation.down{border-color:rgba(255,137,107,.28);background:rgba(255,137,107,.055)}.live-recommendation.keep{border-color:rgba(67,200,255,.25);background:rgba(67,200,255,.045)}
+.live-timer{position:sticky;bottom:10px;margin-top:14px;padding:12px 13px;border-radius:17px;background:rgba(12,17,22,.96);border:1px solid #2a343d;box-shadow:0 12px 34px rgba(0,0,0,.35);display:none}
+.live-timer.show{display:flex;align-items:center;justify-content:space-between;gap:12px}.live-timer-copy small{display:block;color:#8d979f}.live-timer-copy strong{font-size:26px}
+.live-timer button{border:1px solid #33404a;background:#192129;color:#e8edf0;border-radius:12px;padding:10px 12px;font-weight:800}
+.live-footer{position:absolute;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(8,10,13,0),#080a0d 25%);display:grid;grid-template-columns:1fr 1.4fr;gap:8px}
+.live-footer button{padding:14px 10px;border-radius:14px;font-weight:900}.live-secondary{border:1px solid #303b45;background:#12181e;color:#dce2e6}.live-primary{border:0;background:var(--accent);color:#061108}.live-primary:disabled{opacity:.38}
+.resume-workout{display:none;margin-top:12px;padding:14px;border-radius:17px;background:linear-gradient(135deg,rgba(101,245,140,.1),#10151b);border:1px solid rgba(101,245,140,.28)}
+.resume-workout.show{display:block}.resume-workout-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.resume-workout h3{margin:0 0 4px}.resume-workout p{margin:0;color:#9aa4ad;font-size:11px}
+.resume-workout button{margin-top:10px;width:100%;padding:12px;border:0;border-radius:12px;background:var(--accent);color:#061108;font-weight:900}
+.live-summary{display:none}.live-summary.show{display:block}.live-summary-hero{text-align:center;padding:24px 12px}.live-summary-hero .check{width:70px;height:70px;border-radius:50%;margin:0 auto 13px;background:rgba(101,245,140,.13);border:1px solid rgba(101,245,140,.3);display:grid;place-items:center;color:var(--accent);font-size:32px}
+.live-summary-hero h2{margin:0 0 5px}.live-summary-hero p{margin:0;color:#909aa3}.live-summary-list{display:grid;gap:8px}.live-summary-item{padding:12px;border-radius:14px;background:#0b0f13;border:1px solid #252e37}
+.live-summary-item strong{font-size:13px}.live-summary-item small{display:block;color:#8f99a2;margin-top:4px;line-height:1.4}.live-abort{margin-top:14px;width:100%;padding:11px;border:1px solid rgba(255,107,107,.25);background:rgba(255,107,107,.055);color:#ff8a84;border-radius:12px;font-weight:800}
+@media(max-width:390px){.live-exercise-media{height:164px}.live-body{padding-left:13px;padding-right:13px}.live-set-head,.live-set-row{grid-template-columns:31px 1fr 1fr 39px;gap:6px}}
+
   </style>
   <title>MY FORM</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -227,6 +264,14 @@
           <div class="home-stat"><i>🏆</i><strong id="trainingWeeks">0</strong><small>недель</small></div>
           <div class="home-stat"><i>📅</i><strong id="streakDays">0</strong><small>дней подряд</small></div>
         </div>
+
+        <section class="resume-workout" id="resumeWorkoutCard">
+          <div class="resume-workout-top">
+            <div><h3>Тренировка не закончена</h3><p id="resumeWorkoutText">Можно продолжить с того же места.</p></div>
+            <span class="pill">LIVE</span>
+          </div>
+          <button type="button" id="resumeWorkoutBtn">Продолжить тренировку →</button>
+        </section>
 
         <div class="home-section-title">
           <div><h2>Тренировки 3/3</h2><small>3 тренировочных дня · прогресс сохраняется</small></div>
@@ -307,12 +352,12 @@
           </div>
           <div class="exercise-list" id="exerciseList"></div>
           <div class="training-footer">
-            <button class="primary full" id="logWorkoutBtn">✓ Завершить тренировку A</button>
+            <button class="primary full" id="startLiveWorkoutBtn">▶ Начать тренировку A</button>
           </div>
         </section>
 
         <section class="card section-card">
-          <div class="section-head"><h2>MY FORM</h2><span class="pill">v0.9</span></div>
+          <div class="section-head"><h2>MY FORM</h2><span class="pill">v1.0</span></div>
           <div class="tags"><span>🎬 Техника</span><span>🏋️ Подходы</span><span>📈 История</span><span>🏆 Личные рекорды</span></div>
           <p class="workout-note">Открой любое упражнение: внутри теперь три вкладки — техника, запись подходов и история прогрессии.</p>
         </section>
@@ -502,6 +547,66 @@
     </div>
   </dialog>
 
+  <dialog id="liveWorkoutDialog" class="live-workout-dialog">
+    <div class="live-workout-shell">
+      <div class="live-top">
+        <button type="button" class="live-back" id="minimizeLiveWorkout">‹</button>
+        <div class="live-top-copy"><small id="liveDayLabel">ДЕНЬ A</small><h2 id="liveExerciseTitle">Упражнение</h2></div>
+        <div class="live-progress-text" id="liveProgressText">1 / 5</div>
+      </div>
+      <div class="live-progress-bar"><div class="live-progress-fill" id="liveProgressFill"></div></div>
+
+      <div class="live-body">
+        <section id="liveExerciseView">
+          <article class="live-exercise-hero">
+            <div class="live-exercise-media" id="liveExerciseMedia"></div>
+            <div class="live-exercise-info">
+              <div class="eyebrow" id="liveExerciseMuscles">Грудь</div>
+              <h2 id="liveExerciseName">Жим штанги лёжа</h2>
+              <p>Работай технично. На возвращении в зал оставляй примерно 2–3 повтора в запасе.</p>
+              <div class="live-chips" id="liveExerciseChips"></div>
+              <div class="live-prev"><small>Предыдущая тренировка</small><strong id="livePreviousLog">Записей ещё нет</strong></div>
+            </div>
+          </article>
+
+          <div class="live-sets">
+            <div class="live-set-head"><span></span><span>ВЕС, КГ</span><span>ПОВТ.</span><span>ГОТОВО</span></div>
+            <div id="liveSetRows"></div>
+          </div>
+
+          <label class="live-note">Заметка
+            <textarea id="liveExerciseNote" placeholder="Например: вес легко, техника хорошая…"></textarea>
+          </label>
+
+          <div class="live-recommendation" id="liveRecommendation">
+            <small>Рекомендация на следующую тренировку</small>
+            <strong id="liveRecommendationText"></strong>
+          </div>
+
+          <div class="live-timer" id="liveTimer">
+            <div class="live-timer-copy"><small>Отдых</small><strong id="liveTimerText">01:30</strong></div>
+            <button type="button" id="liveTimerSkip">Пропустить</button>
+          </div>
+        </section>
+
+        <section class="live-summary" id="liveSummaryView">
+          <div class="live-summary-hero">
+            <div class="check">✓</div>
+            <h2>Тренировка завершена</h2>
+            <p id="liveSummaryMeta">День A · 5 упражнений</p>
+          </div>
+          <div class="live-summary-list" id="liveSummaryList"></div>
+          <button type="button" class="live-abort" id="cancelLiveWorkout">Удалить незавершённую тренировку</button>
+        </section>
+      </div>
+
+      <div class="live-footer">
+        <button type="button" class="live-secondary" id="livePrevExercise">← Назад</button>
+        <button type="button" class="live-primary" id="liveNextExercise">Следующее →</button>
+      </div>
+    </div>
+  </dialog>
+
   <dialog id="settingsDialog">
     <form method="dialog" class="dialog-card" id="settingsForm">
       <div class="section-head"><h2>Настройки</h2><button class="icon-btn" value="cancel">×</button></div>
@@ -532,14 +637,14 @@ function dateKeyLocal(d=new Date()){
   return `${y}-${m}-${day}`;
 }
 const todayKey = () => dateKeyLocal(new Date());
-const defaultState = { startWeight:70, goalWeight:80, weights:[], workouts:[], meals:[], exerciseLogs:{} };
+const defaultState = { startWeight:70, goalWeight:80, weights:[], workouts:[], meals:[], exerciseLogs:{}, activeWorkout:null };
 let state = load();
 
 function load(){ try { return {...defaultState, ...(JSON.parse(localStorage.getItem(STORAGE_KEY))||{})}; } catch { return {...defaultState}; } }
 function save(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); render(); }
 
 const BACKUP_FORMAT_VERSION = 1;
-const APP_VERSION = '0.9';
+const APP_VERSION = '1.0';
 
 function backupCounts(data){
   const exerciseLogs=data.exerciseLogs && typeof data.exerciseLogs==='object' ? data.exerciseLogs : {};
@@ -751,7 +856,7 @@ function renderTrainingDay(){
   document.getElementById('dayDuration').textContent=plan.duration;
   document.getElementById('workoutHeroTitle').textContent=`День ${selectedDay}`;
   document.getElementById('workoutHeroMuscles').textContent=plan.muscles;
-  document.getElementById('logWorkoutBtn').textContent=`✓ Завершить тренировку ${selectedDay}`;
+  document.getElementById('startLiveWorkoutBtn').textContent=state.activeWorkout?.day===selectedDay?`▶ Продолжить тренировку ${selectedDay}`:`▶ Начать тренировку ${selectedDay}`;
   document.querySelectorAll('.day-btn').forEach(b=>b.classList.toggle('active',b.dataset.day===selectedDay));
   document.getElementById('exerciseList').innerHTML=plan.exercises.map((ex,i)=>`
     <article class="exercise-card v3">
@@ -1068,6 +1173,190 @@ function refreshWorkoutDialogs(){
   }
 }
 
+
+let liveTimerHandle=null;
+let liveTimerRemaining=0;
+
+function repRange(ex){
+  const nums=(String(ex.reps).match(/\d+/g)||[]).map(Number);
+  if(!nums.length) return {min:8,max:12};
+  return {min:nums[0],max:nums[1]||nums[0]};
+}
+function makeLiveEntry(ex){
+  const prev=latestExerciseLog(ex.id);
+  const prevSets=prev?.sets||[];
+  return {
+    exerciseId:ex.id,
+    sets:Array.from({length:ex.sets},(_,i)=>({
+      weight:Number(prevSets[i]?.weight||0),
+      reps:Number(prevSets[i]?.reps||0),
+      done:false
+    })),
+    note:'',
+    recommendation:null
+  };
+}
+function currentLiveWorkout(){return state.activeWorkout||null;}
+function livePlan(){const w=currentLiveWorkout();return w?trainingPlans[w.day]:null;}
+function liveExercise(){
+  const w=currentLiveWorkout(), plan=livePlan();
+  return w&&plan?plan.exercises[w.exerciseIndex]:null;
+}
+function ensureLiveEntries(){
+  const w=currentLiveWorkout(), plan=livePlan();
+  if(!w||!plan)return;
+  w.entries ||= {};
+  plan.exercises.forEach(ex=>{if(!w.entries[ex.id])w.entries[ex.id]=makeLiveEntry(ex);});
+}
+function persistStateOnly(){
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+  renderResumeWorkout();
+}
+function startLiveWorkout(day){
+  if(state.activeWorkout){
+    if(state.activeWorkout.day===day){openLiveWorkout();return;}
+    if(!confirm(`У тебя уже есть незавершённая тренировка ${state.activeWorkout.day}. Удалить её и начать День ${day}?`))return;
+  }
+  state.activeWorkout={id:'session-'+Date.now(),day,startedAt:new Date().toISOString(),exerciseIndex:0,entries:{}};
+  ensureLiveEntries();persistStateOnly();openLiveWorkout();
+}
+function openLiveWorkout(){
+  if(!state.activeWorkout)return;
+  ensureLiveEntries();renderLiveWorkout();
+  const dlg=document.getElementById('liveWorkoutDialog');if(!dlg.open)dlg.showModal();
+}
+function minimizeLiveWorkout(){
+  stopLiveTimer();document.getElementById('liveWorkoutDialog').close();renderResumeWorkout();
+}
+function renderResumeWorkout(){
+  const card=document.getElementById('resumeWorkoutCard');if(!card)return;
+  const w=state.activeWorkout;card.classList.toggle('show',!!w);if(!w)return;
+  const plan=trainingPlans[w.day], ex=plan?.exercises?.[Math.min(w.exerciseIndex,Math.max(0,(plan?.exercises?.length||1)-1))];
+  document.getElementById('resumeWorkoutText').textContent=`День ${w.day} · ${ex?.name||'тренировка'} · упражнение ${Math.min((w.exerciseIndex||0)+1,plan?.exercises?.length||0)} из ${plan?.exercises?.length||0}`;
+}
+function liveMediaHtml(ex){
+  const media=TECH_MEDIA[ex.id];
+  return media?.[0]?`<img src="${media[0]}" alt="${ex.name}">`:movementSvg(ex.visual,false);
+}
+function latestCompletedText(ex){
+  const prev=latestExerciseLog(ex.id);if(!prev)return'Записей ещё нет';
+  const sets=(prev.sets||[]).filter(s=>Number(s.weight)>0||Number(s.reps)>0);
+  return sets.length?sets.map((s,i)=>`${i+1}: ${s.weight||0} кг × ${s.reps||0}`).join(' · '):'Предыдущая запись без рабочих подходов';
+}
+function renderLiveWorkout(){
+  const w=currentLiveWorkout(),plan=livePlan();if(!w||!plan)return;
+  ensureLiveEntries();
+  if(w.exerciseIndex>=plan.exercises.length){renderLiveSummary();return;}
+  document.getElementById('liveExerciseView').style.display='';
+  document.getElementById('liveSummaryView').classList.remove('show');
+  const ex=plan.exercises[w.exerciseIndex],entry=w.entries[ex.id];
+  document.getElementById('liveDayLabel').textContent=`ДЕНЬ ${w.day}`;
+  document.getElementById('liveExerciseTitle').textContent=ex.name;
+  document.getElementById('liveProgressText').textContent=`${w.exerciseIndex+1} / ${plan.exercises.length}`;
+  document.getElementById('liveProgressFill').style.width=`${((w.exerciseIndex+1)/plan.exercises.length)*100}%`;
+  document.getElementById('liveExerciseMedia').innerHTML=liveMediaHtml(ex);
+  document.getElementById('liveExerciseMuscles').textContent=ex.muscles;
+  document.getElementById('liveExerciseName').textContent=ex.name;
+  document.getElementById('liveExerciseChips').innerHTML=`<span class="live-chip">${ex.sets} подхода</span><span class="live-chip">${ex.reps} повторов</span><span class="live-chip">Отдых ${ex.rest}</span>`;
+  document.getElementById('livePreviousLog').textContent=latestCompletedText(ex);
+  document.getElementById('liveExerciseNote').value=entry.note||'';
+
+  const rows=document.getElementById('liveSetRows');
+  rows.innerHTML=entry.sets.map((s,i)=>`
+    <div class="live-set-row ${s.done?'done':''}" data-live-set-row="${i}">
+      <div class="live-set-num">${i+1}</div>
+      <input type="number" min="0" step="0.5" inputmode="decimal" value="${s.weight||''}" placeholder="кг" data-live-weight="${i}">
+      <input type="number" min="0" step="1" inputmode="numeric" value="${s.reps||''}" placeholder="повт." data-live-reps="${i}">
+      <button type="button" class="live-set-done" data-live-done="${i}">${s.done?'✓':'○'}</button>
+    </div>`).join('');
+  rows.querySelectorAll('[data-live-weight]').forEach(inp=>inp.addEventListener('input',()=>updateLiveSetField(Number(inp.dataset.liveWeight),'weight',inp.value)));
+  rows.querySelectorAll('[data-live-reps]').forEach(inp=>inp.addEventListener('input',()=>updateLiveSetField(Number(inp.dataset.liveReps),'reps',inp.value)));
+  rows.querySelectorAll('[data-live-done]').forEach(btn=>btn.addEventListener('click',()=>toggleLiveSetDone(Number(btn.dataset.liveDone))));
+  document.getElementById('liveExerciseNote').oninput=e=>{entry.note=e.target.value;persistStateOnly();};
+  renderLiveRecommendation(ex,entry);
+  document.getElementById('livePrevExercise').disabled=false;
+  document.getElementById('livePrevExercise').textContent=w.exerciseIndex===0?'Свернуть':'← Назад';
+  document.getElementById('liveNextExercise').textContent=w.exerciseIndex===plan.exercises.length-1?'Итоги →':'Следующее →';
+  document.getElementById('liveNextExercise').disabled=!entry.sets.every(s=>s.done);
+}
+function updateLiveSetField(index,field,value){
+  const w=currentLiveWorkout(),ex=liveExercise();if(!w||!ex)return;
+  const s=w.entries[ex.id].sets[index];s[field]=Number(value||0);
+  if(s.done)s.done=false;persistStateOnly();
+  const row=document.querySelector(`[data-live-set-row="${index}"]`);if(row)row.classList.remove('done');
+  const btn=document.querySelector(`[data-live-done="${index}"]`);if(btn)btn.textContent='○';
+  document.getElementById('liveNextExercise').disabled=true;
+  renderLiveRecommendation(ex,w.entries[ex.id]);
+}
+function toggleLiveSetDone(index){
+  const w=currentLiveWorkout(),ex=liveExercise();if(!w||!ex)return;
+  const s=w.entries[ex.id].sets[index];
+  if(!s.done&&(!s.weight||!s.reps)){toast('Сначала введи вес и повторы');return;}
+  s.done=!s.done;persistStateOnly();
+  if(s.done)startLiveTimer(recommendedRestSeconds(ex.rest));else stopLiveTimer();
+  renderLiveWorkout();
+}
+function progressionFor(ex,entry){
+  const done=entry.sets.filter(s=>s.done&&s.weight>0&&s.reps>0);
+  if(done.length!==entry.sets.length)return null;
+  const {min,max}=repRange(ex),avg=done.reduce((n,s)=>n+s.reps,0)/done.length;
+  if(done.every(s=>s.reps>=max))return{type:'up',text:'Добавь минимальный доступный шаг веса в следующий раз.'};
+  if(done.some(s=>s.reps<min)||avg<min)return{type:'down',text:'Снизь вес на один небольшой шаг и верни техничные повторы.'};
+  return{type:'keep',text:'Оставь этот вес и сначала добери верхнюю границу повторов.'};
+}
+function renderLiveRecommendation(ex,entry){
+  const box=document.getElementById('liveRecommendation'),rec=progressionFor(ex,entry);
+  entry.recommendation=rec;box.className='live-recommendation'+(rec?` show ${rec.type}`:'');
+  document.getElementById('liveRecommendationText').textContent=rec?.text||'';persistStateOnly();
+}
+function startLiveTimer(seconds){
+  stopLiveTimer();liveTimerRemaining=seconds;renderLiveTimer();document.getElementById('liveTimer').classList.add('show');
+  liveTimerHandle=setInterval(()=>{liveTimerRemaining--;renderLiveTimer();if(liveTimerRemaining<=0){stopLiveTimer();document.getElementById('liveTimer').classList.remove('show');if(navigator.vibrate)navigator.vibrate([120,80,120]);toast('Отдых закончен');}},1000);
+}
+function stopLiveTimer(){if(liveTimerHandle){clearInterval(liveTimerHandle);liveTimerHandle=null;}}
+function renderLiveTimer(){document.getElementById('liveTimerText').textContent=formatTimer(liveTimerRemaining);}
+function nextLiveExercise(){
+  const w=currentLiveWorkout(),plan=livePlan();if(!w||!plan)return;
+  const ex=plan.exercises[w.exerciseIndex],entry=w.entries[ex.id];
+  if(!entry.sets.every(s=>s.done)){toast('Отметь все подходы');return;}
+  stopLiveTimer();document.getElementById('liveTimer').classList.remove('show');w.exerciseIndex++;persistStateOnly();renderLiveWorkout();
+}
+function prevLiveExercise(){
+  const w=currentLiveWorkout();if(!w)return;
+  if(w.exerciseIndex===0){minimizeLiveWorkout();return;}
+  stopLiveTimer();document.getElementById('liveTimer').classList.remove('show');w.exerciseIndex--;persistStateOnly();renderLiveWorkout();
+}
+function renderLiveSummary(){
+  const w=currentLiveWorkout(),plan=livePlan();if(!w||!plan)return;
+  document.getElementById('liveExerciseView').style.display='none';document.getElementById('liveSummaryView').classList.add('show');
+  document.getElementById('liveExerciseTitle').textContent='Итоги тренировки';
+  document.getElementById('liveProgressText').textContent=`${plan.exercises.length} / ${plan.exercises.length}`;
+  document.getElementById('liveProgressFill').style.width='100%';
+  document.getElementById('liveSummaryMeta').textContent=`День ${w.day} · ${plan.exercises.length} упражнений`;
+  document.getElementById('liveSummaryList').innerHTML=plan.exercises.map(ex=>{
+    const e=w.entries[ex.id],rec=e.recommendation||progressionFor(ex,e);
+    const top=e.sets.filter(s=>s.done).reduce((best,s)=>s.weight>best.weight?s:best,{weight:0,reps:0});
+    return`<div class="live-summary-item"><strong>${ex.name}</strong><small>${top.weight?`${top.weight} кг × ${top.reps} · `:''}${rec?.text||'Запись сохранена.'}</small></div>`;
+  }).join('');
+  document.getElementById('livePrevExercise').textContent='← Назад';document.getElementById('livePrevExercise').disabled=false;
+  document.getElementById('liveNextExercise').textContent='✓ Сохранить тренировку';document.getElementById('liveNextExercise').disabled=false;
+}
+function finishLiveWorkout(){
+  const w=currentLiveWorkout(),plan=livePlan();if(!w||!plan)return;
+  const completedAt=new Date().toISOString();state.exerciseLogs||={};
+  plan.exercises.forEach(ex=>{
+    const entry=w.entries[ex.id];state.exerciseLogs[ex.id]||=[];
+    state.exerciseLogs[ex.id].push({date:completedAt,day:w.day,sets:entry.sets.map(({weight,reps})=>({weight:Number(weight||0),reps:Number(reps||0)})),note:entry.note||'',sessionId:w.id,recommendation:entry.recommendation||null});
+  });
+  state.workouts.push({date:completedAt,day:w.day,sessionId:w.id,startedAt:w.startedAt});
+  state.activeWorkout=null;save();stopLiveTimer();document.getElementById('liveWorkoutDialog').close();toast(`Тренировка ${w.day} сохранена`);go('home');
+}
+function cancelLiveWorkout(){
+  if(!state.activeWorkout)return;
+  if(!confirm('Удалить незавершённую тренировку? Уже введённые подходы этой сессии будут потеряны.'))return;
+  state.activeWorkout=null;persistStateOnly();stopLiveTimer();document.getElementById('liveWorkoutDialog').close();render();toast('Незавершённая тренировка удалена');
+}
+
 function go(screen){
   document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.dataset.screen===screen));
   document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===screen));
@@ -1079,7 +1368,23 @@ document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
 
 document.querySelectorAll('.day-btn').forEach(b=>b.addEventListener('click',()=>{selectedDay=b.dataset.day;renderTrainingDay();}));
-document.querySelectorAll('[data-start-day]').forEach(b=>b.addEventListener('click',()=>{selectedDay=b.dataset.startDay;go('workouts');renderTrainingDay();}));
+
+document.getElementById('startLiveWorkoutBtn').addEventListener('click',()=>startLiveWorkout(selectedDay));
+document.getElementById('resumeWorkoutBtn').addEventListener('click',openLiveWorkout);
+document.getElementById('minimizeLiveWorkout').addEventListener('click',minimizeLiveWorkout);
+document.getElementById('liveTimerSkip').addEventListener('click',()=>{stopLiveTimer();liveTimerRemaining=0;document.getElementById('liveTimer').classList.remove('show');});
+document.getElementById('livePrevExercise').addEventListener('click',()=>{
+  const w=currentLiveWorkout(),plan=livePlan();
+  if(w&&plan&&w.exerciseIndex>=plan.exercises.length){w.exerciseIndex=plan.exercises.length-1;persistStateOnly();renderLiveWorkout();}
+  else prevLiveExercise();
+});
+document.getElementById('liveNextExercise').addEventListener('click',()=>{
+  const w=currentLiveWorkout(),plan=livePlan();if(!w||!plan)return;
+  if(w.exerciseIndex>=plan.exercises.length)finishLiveWorkout();else nextLiveExercise();
+});
+document.getElementById('cancelLiveWorkout').addEventListener('click',cancelLiveWorkout);
+
+document.querySelectorAll('[data-start-day]').forEach(b=>b.addEventListener('click',()=>{selectedDay=b.dataset.startDay;startLiveWorkout(selectedDay);}));
 document.querySelectorAll('[data-detail-tab]').forEach(b=>b.addEventListener('click',()=>switchExerciseTab(b.dataset.detailTab)));
 
 document.querySelectorAll('[data-history-days]').forEach(b=>b.addEventListener('click',()=>{
@@ -1175,7 +1480,6 @@ document.getElementById('mealForm').addEventListener('submit',e=>{
 });
 
 document.getElementById('clearMeals').addEventListener('click',()=>{ state.meals=state.meals.filter(m=>m.date!==todayKey()); save(); });
-document.getElementById('logWorkoutBtn').addEventListener('click',()=>{ const today=todayKey(); const exists=state.workouts.some(w=>w.date&&dateKeyLocal(new Date(w.date))===today&&w.day===selectedDay); if(!exists) state.workouts.push({date:new Date().toISOString(),day:selectedDay}); save(); renderTrainingDay(); toast(exists?'Эта тренировка уже отмечена сегодня':`Тренировка ${selectedDay} завершена`); });
 
 const dlg=document.getElementById('settingsDialog');
 document.getElementById('settingsBtn').addEventListener('click',()=>{ document.getElementById('startWeightSetting').value=state.startWeight; document.getElementById('goalWeightSetting').value=state.goalWeight; dlg.showModal(); });
@@ -1195,7 +1499,7 @@ function render(){
   ['caloriesToday','nutritionCalories'].forEach(id=>document.getElementById(id).textContent=Math.round(c)); ['proteinToday','nutritionProtein'].forEach(id=>document.getElementById(id).textContent=Math.round(pr));
   const gain=w-start; document.getElementById('totalGain').textContent=(gain>=0?'+':'')+fmt(gain)+' кг'; document.getElementById('toGoal').textContent=fmt(Math.max(0,goal-w))+' кг'; document.getElementById('chartStart').textContent=fmt(start)+' кг'; document.getElementById('chartNow').textContent=fmt(w)+' кг';
   document.getElementById('progressBadge').textContent=gain>0?('+'+fmt(gain)+' кг'):'Старт'; document.getElementById('weightDelta').textContent=state.weights.length?`Последнее измерение: ${fmt(w)} кг · изменение от старта ${gain>=0?'+':''}${fmt(gain)} кг`:'Добавь первое измерение — построим прогресс.';
-  renderMeals(meals); renderChart(); renderTrainingDay(); renderHomeStats(); renderRecentWorkouts();
+  renderMeals(meals); renderChart(); renderTrainingDay(); renderHomeStats(); renderRecentWorkouts(); renderResumeWorkout();
 }
 
 function renderMeals(meals){ const el=document.getElementById('mealList'); if(!meals.length){el.className='empty-state';el.textContent='Пока записей нет.';return;} el.className=''; el.innerHTML=meals.map(m=>`<div class="meal-item"><div><strong>${escapeHtml(m.name)}</strong><br><small>${Math.round(m.calories)} ккал · ${Math.round(m.protein)} г белка</small></div></div>`).join(''); }
